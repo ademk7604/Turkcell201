@@ -1,8 +1,6 @@
 package d04_static_Normal_Methodlar;
 
-import java.security.AccessControlContext;
 import java.util.Arrays;
-import java.util.Iterator;
 
 public class Driver {
 
@@ -28,31 +26,57 @@ public class Driver {
 
 		System.out.println(Driver.eq(a, b));
 		System.out.println(Driver.cube(3));
-		
-		int[] numbers= {2,4,6,8};
+
+		int[] numbers = { 2, 4, 6, 8 };
 		System.out.println(toplam(numbers));
-		
-		int[] sonucCiftSayilar = Driver.ciftSayilar(new int[] {1,2,3,4,5,6,7,8,9,0});
+
+		int[] sonucCiftSayilar = Driver.ciftSayilar(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 });
 		System.out.println(Arrays.toString(sonucCiftSayilar));
+		
+		int x2= 10;
+		int y2=20;
+		
+		System.out.println(x2 + " " + y2);
+		degistir(x2, y2);
+		System.out.println(x2 + " " + y2);
+		// Bu sekilde bir degisken gonderilirkern java bir kopyasini alip gonderir yani asagidaki islem calismaz. ayni sonucu verir
+		
+		int[] sayilar = {2,3};
+		System.out.println(Arrays.toString(sayilar));
+		Driver.degistir(sayilar);
+		System.out.println(Arrays.toString(sayilar));
+
+		
 	}
+	public static void degistir(int[] sayilar) {
+		int temp = sayilar[0];
+		sayilar[0]=sayilar[1];
+		sayilar[1]=temp;
+	}
+	public static void degistir(int x, int y) {
+		int temp =x;
+		x=y;
+		y=temp;
+	}
+
 	public static int[] ciftSayilar(int[] sayilar) {
 		int[] sonuc = null;
 		int adet = 0;
 		for (int i = 0; i < sayilar.length; i++) {
-			if(sayilar[i] % 2 == 0) {
+			if (sayilar[i] % 2 == 0) {
 				adet++;
 			}
 		}
 		sonuc = new int[adet];
 		int index = 0;
 		for (int i = 0; i < sayilar.length; i++) {
-			if(sayilar[i] % 2 == 0) {
+			if (sayilar[i] % 2 == 0) {
 				sonuc[index++] = sayilar[i];
 			}
 		}
 		return sonuc;
 	}
-	
+
 	public static int toplam(int[] x) {
 		int result = 0;
 		for (int i = 0; i < x.length; i++) {
@@ -91,12 +115,10 @@ public class Driver {
 		return (x && y) || (x && z) || (y && z);
 
 	}
-	
+
 	public static int cube(int x) {
-		return x*x*x;
+		return x * x * x;
 	}
-	
-	
 
 	public static boolean eq(int[] x, int[] y) {
 		boolean result = true;
