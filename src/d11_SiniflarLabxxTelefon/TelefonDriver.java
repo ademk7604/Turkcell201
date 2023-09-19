@@ -8,7 +8,7 @@ public class TelefonDriver {
 		telefon.tip = TelefonTipi.CEP;
 		telefon.mobilVeri = true;
 		telefon.wifi = true;
-		
+		  
 		telefon.aramaYap("5554433"); // burayi yoruma aldigimizda bu methoddaki aramaVarmi methodu true olmuoyr alttaki methodda calismaz.
 									// bu abstraction diyoruz. yani arka planda methodundetayini bilmeden kullanmak
 		telefon.aramayiSonlandir();
