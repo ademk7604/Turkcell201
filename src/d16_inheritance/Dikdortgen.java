@@ -18,6 +18,9 @@ public class Dikdortgen extends Sekil{
 	public void setYukseklik(int _yukseklik) {
 		yukseklik=_yukseklik;
 	}
+	/*public void alanHesapla() {
+		System.out.println("Dikdortgen Alan: "+(uzunluk*yukseklik));
+	}*/
 	
 
 }

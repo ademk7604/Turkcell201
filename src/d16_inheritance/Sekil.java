@@ -29,5 +29,8 @@ public class Sekil {
 	public void setPosY(int _y) {
 		posY = _y;
 	}
+	public void alanHesapla() {
+		System.out.println("Alan hesaplanamadi");
+	}
 
 }

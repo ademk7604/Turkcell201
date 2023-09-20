@@ -12,5 +12,8 @@ public class Kare extends Sekil{
 	public void setKenarUzunlugu(int uzunluk) {
 		kenarUzunlugu=uzunluk;
 	}
+	/*public void alanHesapla() {
+		System.out.println("Alan: "+ (kenarUzunlugu*kenarUzunlugu));
+	}*/
 
 }

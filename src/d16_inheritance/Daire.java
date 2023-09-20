@@ -10,4 +10,7 @@ public class Daire extends Sekil{
 	public void setYaricap(int _yaricap) {
 		yaricap=_yaricap;
 	}
+	public void alanHesapla() {
+		System.out.println("Daire Alan: "+(Math.PI*yaricap*yaricap));
+	}
 }
