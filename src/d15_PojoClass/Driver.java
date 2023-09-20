@@ -15,6 +15,16 @@ public class Driver {
 		System.out.println(calisan.getMaas());
 		System.out.println(calisan.getIseGirisTarihi());
 		
+		Kare kare = new Kare();
+		kare.setX(10);
+		kare.setY(-5);
+		kare.setUzunluk(100);
+		kare.ekranaBastir();
+		System.out.println(kare.getUzunluk());
+		System.out.println(kare.getX());
+		System.out.println(kare.getY());
+		
+		
 	}
 
 }
