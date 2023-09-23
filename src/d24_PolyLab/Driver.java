@@ -5,7 +5,7 @@ public class Driver {
 	public static void main(String[] args)
 			throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 
-		//OPEN-CLOSE PRENSIBLE WURDE AUFGEACTET
+		// OPEN-CLOSE PRENSIBLE WURDE AUFGEACTET
 		DbConnection dbConnection = (DbConnection) Class.forName(args[0]).newInstance();
 		dbConnection.openConnection();
 		dbConnection.executeQuery("SELECT ** FROM student");
