@@ -16,12 +16,27 @@ public class Driver {
 		elmalar[8] = new Elma(35, "Yesil");
 		elmalar[9] = new Elma(65, "Sari");
 
-		renkFiltrele("Kirmizi", elmalar);
-		System.out.println("-----");
-		agirlikFiltrele(50, elmalar);
-		System.out.println("-----");
-		agirlikFiltrele2(50, elmalar);
+		/*
+		 * renkFiltrele("Sari", elmalar); System.out.println("-----");
+		 * agirlikFiltrele(50, elmalar); System.out.println("-----");
+		 * agirlikFiltrele2(50, elmalar);
+		 */
+		// RenkFiltresi renkFiltresi = new RenkFiltresi();
+		// filtrele(renkFiltresi, elmalar);
+		// AgirlikFiltresi agirlikFiltresi = new AgirlikFiltresi();
+		// filtrele(agirlikFiltresi, elmalar);
+		ElmaFiltresi elmaFiltresi = new AgirlikFiltresi();
+		filtrele(elmaFiltresi, elmalar);
 
+	}
+
+	public static void filtrele(ElmaFiltresi elmaFiltresi, Elma[] elmalar) {
+		for (int i = 0; i < elmalar.length; i++) {
+			Elma elma = elmalar[i];
+			if (elmaFiltresi.filtrele(elma)) {
+				System.out.println(elma.getAgirlik() + " " + elma.getRenk());
+			}
+		}
 	}
 
 	public static void renkFiltrele(String renk, Elma[] elmalar) {
