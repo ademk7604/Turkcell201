@@ -5,9 +5,16 @@ import java.util.Scanner;
 public class Driver {
 	public static void main(String[] args) {
 
-		// arithExcep();
+		// inputMismatchExcep();
+		// arithmeticException();
 		// arrayExcep();
 		nullPointer();
+
+	} 
+	public static void inputMismatchExcep() {
+		Scanner scanner = new Scanner(System.in);
+		int number = scanner.nextInt();
+		System.out.println(number); // a girdigimde sayi olmadigi icin java.util.InputMismatchException
 
 	}
 
@@ -25,12 +32,13 @@ public class Driver {
 		System.out.println(numbers[index]);
 	}
 
-	public static void arithExcep() {
+	public static void arithmeticException() {
 		Scanner scanner = new Scanner(System.in);
 		int x = scanner.nextInt();
 		int y = scanner.nextInt(); // y=0 java.lang.ArithmeticException:
 
 		System.out.println(x / y);
 	}
+	
 
 }

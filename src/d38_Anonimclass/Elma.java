@@ -4,21 +4,23 @@ public class Elma {
 	
 	private int agirlik;
 	
-	public Elma(int agirlik) {
+	public Elma (int agirlik) {
 		this.agirlik=agirlik;
 	}
 	
-	public int getAgirlik() {
+	
+	public int getAgirlik(){
 		return agirlik;
 	}
+	
+	
 	public void setAgirlik(int agirlik) {
 		this.agirlik=agirlik;
 	}
 	
 	@Override
 	public String toString() {
-		return "agirlik: "+getAgirlik();
+		return "Agirlik: "+getAgirlik();
 	}
-	
 
 }
